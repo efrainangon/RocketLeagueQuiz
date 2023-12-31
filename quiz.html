@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <script>
+              function play()
+              {
+              alert("How much do you know about Rocket League, Play this game to find out!");
+                  var totalpoints = 0;
+              //question 1
+                  var response1 = prompt("Question 1: The highest level you can reach in Rocket League is: \n 1. There is no limit \n 2. 75 \n 3. 50");
+                  if (response1 == "2")
+                  {
+                      totalpoints = totalpoints + 50;
+                      alert("Correct! You now have " + totalpoints + " points");
+                  }
+                  else
+                      {
+                          alert("Oh no your answer is wrong! You still have " + totalpoints + " points");
+                      }
+                //question2
+                   var response2 = prompt("Question 2: This car is unlockable in Rocket League: \n 1. Merc \n 2. Endo \n 3. Breakout Type S");
+                  if (response2 == "1")
+                  {
+                      totalpoints = totalpoints + 50;
+                      alert("Correct! You now have " + totalpoints + " points");
+                  }
+                  else
+                      {
+                          alert("Noooooo! You get that in a crate! You still have " + totalpoints + " points");
+                      }
+                  //question 3
+               var response3 = prompt("Question 3: Can you play splitscreen in rocketleague? : \n 1. Yes \n 2. No");
+                  if (response3 == "1")
+                  {
+                      totalpoints = totalpoints + 50;
+                      alert("Correct! You now have " + totalpoints + " points");
+                  }
+                  else
+                      {
+                          alert("How did you not get this one!? You still have " + totalpoints + " points");
+                      }
+                  //question 4
+               var response4 = prompt("Question 4: The highest rank you can get in competetive is: \n 1.Champion \n 2. Grand Champion \n 3. Legend");
+                  if (response4 == "2")
+                  {
+                      totalpoints = totalpoints + 50;
+                      alert("Correct! You now have " + totalpoints + " points")
+                  }
+                  else
+                      {
+                          alert("Oh no your answer is wrong! You still have " + totalpoints + " points");
+                      }
+                //question 5
+               var response5 = prompt("Question 5: What mystery decal is in the turbo crate: \n 1. Parallax \n 2. Slipstream \n 3. Bubbly \n 4. Tora \n 5. Spectre");
+                  if (response5 == "4")
+                  {
+                      totalpoints = totalpoints + 50;
+                      alert("Correct! You now have " + totalpoints + (" points"))
+                  }
+                  else
+                      {
+                          alert("Oh no your answer is wrong! You still have " + totalpoints + " points")
+                      }
+             
+             var goodOrBad;
+              if(totalpoints >= 150)
+                  {
+                      goodOrBad = "Wow you did well, do you play rocket league?";
+                  }
+                  else
+                      {
+                          goodOrBad = "Ouch you got a low score, you should play rocket league";
+                      }
+                var endResult = "You got " + totalpoints + " points. " + goodOrBad;
+              var display = document.getElementById("EndingHTML");
+              display.innerHTML = endResult;
+              
+              }
+              
+          </script>
+    </head>    
+    <body>
+         <h1>Rocket League Quiz</h1>
+        <input type="button" value="Start Game" onclick="play()" />
+        <h2 id="EndingHTML"></h2>
+    </body>
+</html>
